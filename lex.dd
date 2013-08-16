@@ -685,6 +685,10 @@ $(GNAME HexDigitsNoSingleUS):
     $(GLINK HexDigit) $(GLINK HexDigitsUS)
     $(GLINK HexDigitsUS) $(GLINK HexDigit)
 
+$(GNAME HexDigitUS):
+    $(GLINK HexDigit)
+    $(D _)
+
 $(GNAME HexDigit):
     $(GLINK DecimalDigit)
     $(GLINK HexLetter)
@@ -702,7 +706,6 @@ $(GNAME HexLetter):
     $(B D)
     $(B E)
     $(B F)
-    $(D _)
 )
 
 	$(P Integers can be specified in decimal, binary, octal, or hexadecimal.)
