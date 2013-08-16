@@ -593,7 +593,7 @@ $(GNAME DecimalInteger):
     $(GLINK NonZeroDigit) $(I DecimalDigitsUS)
 
 $(GNAME BinaryInteger):
-    $(GLINK BinPrefix) $(GLINK BinaryDigits)
+    $(GLINK BinPrefix) $(GLINK BinaryDigitsNoSingleUS)
 
 $(GNAME BinPrefix):
     $(B 0b)
@@ -641,6 +641,11 @@ $(GNAME DecimalDigitUS):
 $(GNAME BinaryDigitsUS):
     $(GLINK BinaryDigitUS)
     $(GLINK BinaryDigitUS) $(I BinaryDigitsUS)
+
+$(GNAME BinaryDigitsNoSingleUS):
+    $(GLINK BinaryDigit)
+    $(GLINK BinaryDigit) $(GLINK BinaryDigitsUS)
+    $(GLINK BinaryDigitsUS) $(GLINK BinaryDigit)
 
 $(GNAME BinaryDigit):
     $(B 0)
